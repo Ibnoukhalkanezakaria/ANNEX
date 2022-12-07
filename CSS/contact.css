@@ -1,0 +1,302 @@
+/* Start Variables */
+:root {
+  /* ## Colors ``` */
+  --white: #ffffff;
+  --Black: #000000;
+  --color1: #f6f4ed;
+  --color2: #111111;
+  --color3: #f3e2d9;
+  --color4: #d0987a;
+  /* ## Typography  */
+  --fs-1: calc(2.3rem + 2.1vw);
+  --fs-2: calc(2.1rem + 0.9vw);
+  --fs-3: calc(2rem + 0.3vw);
+  --fs-4: 2rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.5rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.3rem;
+  --fs-9: 1.2rem;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  /* ## Shadow  */
+  --shadow: 0 10px 30px hsla(0, 0%, 0%, 0.1);
+  /* ## Border Radius  */
+  --radius-pill: 500px;
+  --radius-circle: 50%;
+  --radius-5: 5px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+  /* ## Transition  */
+  --transition: 0.25s ease;
+}
+/* End Variables */
+/* Start Global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+/* End Global rules */
+
+/* Start Header */
+header {
+  padding: 20px 0;
+}
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.logo a {
+  color: var(--color2);
+  font-size: var(--fs-3);
+  font-weight: 700;
+}
+.navlinks {
+  position: relative;
+}
+.navlinks ul li {
+  display: inline-block;
+}
+.navlinks ul {
+  margin-left: 20px;
+}
+.navlinks ul li {
+  margin: 10px;
+}
+.navlinks ul li span {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navlinks ul li a {
+  position: relative;
+  color: var(--color2);
+  font-size: var(--fs-3);
+}
+.navlinks ul li .Khale {
+  margin-left: 50px;
+}
+.navlinks ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  background-color: var(--color2);
+  height: 1px;
+  width: 0;
+  transition: var(--transition);
+}
+.navlinks ul li a:hover::after {
+  width: 100%;
+}
+#ch-down {
+  font-size: 20px;
+  cursor: pointer;
+}
+.navlinks ul .Khale.active {
+  opacity: 1;
+}
+.openmenu {
+  border: 1px solid var(--Black);
+  padding: 5px 7px;
+  border-radius: var(--radius-5);
+  font-weight: 600;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: var(--fs-7);
+}
+.closemenu {
+  display: none;
+  color: var(--color2);
+  font-weight: 700;
+  font-size: var(--fs-6);
+  cursor: pointer;
+}
+.navlinks {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  background-color: var(--color1);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 5;
+}
+.navlinks.active {
+  opacity: 1;
+  left: 0;
+}
+.navlinks ul {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.navlinks ul li {
+  display: block;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: var(--fs-6);
+}
+.navlinks ul li a {
+  color: var(--color2);
+}
+.closemenu {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: var(--color2);
+}
+/* End Header */
+
+/* Start Contact */
+.Contact {
+  margin-top: 100px;
+}
+.contact-cnt {
+  width: 800px;
+  max-width: 100%;
+  margin: 50px auto;
+}
+.Contact h1 {
+  color: var(--color2);
+  font-size: var(--fs-2);
+}
+.contact-scr {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  line-height: 35px;
+  font-size: var(--fs-8);
+}
+.col-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact-cnt .col p {
+  font-size: var(--fs-8);
+  margin: 10px 0;
+}
+.contact-cnt form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 50px 0;
+}
+.contact-cnt form input,
+textarea {
+  outline: none;
+  border: none;
+  margin: 20px 0;
+  border: 1px solid rgb(211, 211, 211);
+  padding: 20px;
+}
+.contact-cnt label {
+  font-weight: 600;
+  font-size: var(--fs-9);
+}
+.required {
+  color: rgb(126, 126, 126);
+}
+.contact-cnt #submit {
+  width: 150px;
+  background-color: var(--color2);
+  color: var(--white);
+  cursor: pointer;
+}
+/* End Contact */
+
+/* Start Footer */
+.box {
+  background-color: var(--Black);
+  color: var(--white);
+  border-radius: var(--radius-16);
+  padding: 100px;
+}
+.box h5 {
+  font-size: var(--fs-7);
+  font-weight: 600;
+}
+.box h2 {
+  font-size: var(--fs-2);
+  margin: 30px 0;
+  font-weight: 600;
+}
+.box button {
+  background-color: var(--white);
+  padding: 15px 30px;
+  border: none;
+}
+.box button a {
+  color: var(--Black);
+  font-size: var(--fs-9);
+}
+.flex-row {
+  margin: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+.col {
+  margin-right: auto;
+}
+.col h4 {
+  margin-bottom: 10px;
+}
+.col p {
+  margin: 5px 0;
+}
+.col p a {
+  color: var(--color2);
+}
+.col ul li {
+  display: inline-block;
+}
+.col ul li a {
+  color: var(--color2);
+  margin-right: 10px;
+}
+.copy {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #888a88;
+  margin-bottom: 20px;
+}
+/* End Footer */
